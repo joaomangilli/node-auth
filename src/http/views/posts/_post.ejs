@@ -1,0 +1,15 @@
+<li>
+  <div><%= post.title %></div>
+
+  <% if(currentUser?.isPublisher() && currentUser?.id === post.userId) { %>
+    <div>
+      <a href="/posts/<%= post.id %>/edit">Edit</a>
+    </div>
+  <% } %>
+
+  <% if(currentUser?.isAdmin()) { %>
+    <div>
+      <a href="/posts/<%= post.id %>/delete">Delete</a>
+    </div>
+  <% } %>
+</li>

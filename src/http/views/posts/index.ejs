@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+
+<% if(currentUser?.isPublisher()) { %>
+  <a href="/posts/create">New Post</a>
+<% } %>
+
+<ul>
+  <% posts.forEach((post) => { %>
+    <%- include('_post', { post }) %>
+  <% }) %>
+</ul>
