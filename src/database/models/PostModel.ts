@@ -38,4 +38,4 @@ class PostModel extends BaseModel {
 }
 
 export { PostModel };
-export type BetSchema = ModelObject<PostModel>;
+export type PostSchema = ModelObject<PostModel>;
